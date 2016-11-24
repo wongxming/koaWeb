@@ -1,0 +1,29 @@
+{% extends tmpPath+"/layout/layout.html" %}
+
+{% block body %}
+<script type="text/javascript" language="javascript" src="/js/home.js"></script>
+
+
+<form id="orderForm" method="post" action="/api/submitOrder" >
+
+
+收货人:  <input type="text" name="name" /><br>
+手机号:  <input type="text"  name="mobile" /><br>
+地址:  <input type="text" name="address" /><br>
+<input type="hidden" name="productsStr" /><br>
+
+<p><input type="submit" value="确认下单" onclick="formSubmit()"/></p>
+</form>
+
+<script type="text/javascript">
+function formSubmit()
+  {
+  var orderForm = document.getElementById("orderForm");
+  var pIds = [{'pId':'582f0feb83576d2c443b806a','pCount':2},{'pId':'583108195007304ba372063f','pCount':1}];
+
+orderForm.elements['productsStr'].value = JSON.stringify(pIds);
+  orderForm.submit();
+  }
+</script>
+
+{% endblock %}

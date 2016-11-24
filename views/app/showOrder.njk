@@ -1,0 +1,27 @@
+{% extends tmpPath+"/layout/layout.html" %}
+
+{% block body %}
+<script type="text/javascript" language="javascript" src="/js/showOrder.js"></script>
+
+<div id="content-wrapper">
+      <div id="order-header"></div>
+</div>
+
+
+
+
+<div id="input-mobile">
+手机号：<input type="text"  id="inputMobile"/><br>
+
+
+<p><input type="submit" value="查询" onclick="saveMobile()"/></p>
+</div>
+
+
+<script type="text/html" id="template-order-header">
+<div class="orderText">{order.name}</div>
+<div class="orderText">{order.mobile}</div>
+<div class="orderText">{order.address}</div>
+</script>
+
+{% endblock %}

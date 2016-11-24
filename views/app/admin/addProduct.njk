@@ -1,0 +1,14 @@
+{% extends tmpPath+"/layout/layout.html" %}
+
+{% block body %}
+<script type="text/javascript" language="javascript" src="/js/addProduct.js"></script>
+
+商品名字:  <input type="text" id="pName" /><br>
+图片url:  <input type="text" id="imgUrl" /><br>
+单价(分):  <input type="text" id="price" /><br>
+商品描述:  <input type="text" id="desc" /><br>
+
+<p><input type="submit" value="提交" onclick="formSubmit()"/></p>
+
+
+{% endblock %}

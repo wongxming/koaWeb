@@ -1,0 +1,22 @@
+{% extends tmpPath+"/layout/layout.html" %}
+
+{% block body %}
+<script type="text/javascript" language="javascript" src="/js/home.js"></script>
+
+{{pageId}}
+
+<form id="bookingForm" method="post" action="/booking/" >
+First name:  <input type="text" name="first_name" />
+<br>
+Last name:  <input type="text" name="last_name" /><br>
+<p><input type="submit" value="提交" onclick="formSubmit()"/></p>
+</form>
+
+<script type="text/javascript">
+function formSubmit()
+  {
+  document.getElementById("bookingForm").submit();
+  }
+</script>
+
+{% endblock %}
